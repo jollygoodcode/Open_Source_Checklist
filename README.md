@@ -37,7 +37,7 @@
 - [ ] DEPLOYMENT file (Optional)
   * How to Deploy?
 - [ ] Code of Conduct
-  * http://contributor-covenant.org/version/1/2/0/code_of_conduct.md
+  * http://contributor-covenant.org/version/1/3/0/code_of_conduct.md
 - [ ] Tests
   * All passed!
 - [ ] Wiki (Optional)
