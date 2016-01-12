@@ -2,11 +2,13 @@
 
 [Copy-paste friendly version](/COPYME.md).
 
-## Get all templates to local
+Get all templates to local
 
-```bash
-ruby <(curl -sSL https://raw.githubusercontent.com/jollygoodcode/Open_Source_Checklist/master/bin/docopy) all
-```
+    ruby <(curl -sSL https://git.io/vzmvV) all
+
+Single template also can, see usage:
+
+    ruby <(curl -sSL https://git.io/vzmvV)
 
 ## General
 

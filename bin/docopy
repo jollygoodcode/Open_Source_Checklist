@@ -7,11 +7,12 @@ usage = <<~USAGE
 Get a document template to local.
 
 Commands:
-  docopy contributing # Copy CONTRIBUTING.md from jollygoodcode/Open_Source_Checklist
-  docopy deployment   # Copy DEPLOYMENT.md   from jollygoodcode/Open_Source_Checklist
-  docopy footer       # Copy FOOTER.md       from jollygoodcode/Open_Source_Checklist
-  docopy readme       # Copy LICENSE.md      from jollygoodcode/Open_Source_Checklist
-  docopy license      # Copy README.md       from jollygoodcode/Open_Source_Checklist
+  docopy contributing # Copy CONTRIBUTING.md from jollygoodcode/Open_Source_Checklist.
+  docopy deployment   # Copy DEPLOYMENT.md   from jollygoodcode/Open_Source_Checklist.
+  docopy footer       # Copy FOOTER.md       from jollygoodcode/Open_Source_Checklist.
+  docopy readme       # Copy LICENSE.md      from jollygoodcode/Open_Source_Checklist.
+  docopy license      # Copy README.md       from jollygoodcode/Open_Source_Checklist.
+  docopy all          # Copy all of above document templates to local.
 USAGE
 
 documents = {
