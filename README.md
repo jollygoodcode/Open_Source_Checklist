@@ -2,6 +2,12 @@
 
 [Copy-paste friendly version](/COPYME.md).
 
+## Get all templates to local
+
+```bash
+ruby <(curl -sSL https://raw.githubusercontent.com/jollygoodcode/Open_Source_Checklist/master/bin/docopy) all
+```
+
 ## General
 
 - [ ] README file

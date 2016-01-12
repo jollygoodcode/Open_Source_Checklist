@@ -28,12 +28,18 @@ first_argument = ARGV.first
 
 abort(usage) if ["-h", "--help", "help"].include?(first_argument)
 
-unless documents.keys.include?(first_argument)
-  abort("Document #{first_argument} not found.\n" + usage)
+def create_file(file)
+  `curl --silent https://raw.githubusercontent.com/jollygoodcode/Open_Source_Checklist/master/#{file} -o #{file}`
+
+  puts "#{file} created."
 end
 
-file = documents[first_argument]
+if first_argument != "all"
+  unless documents.keys.include?(first_argument)
+    abort("Document #{first_argument} not found.\n" + usage)
+  end
 
-`curl --silent https://raw.githubusercontent.com/jollygoodcode/Open_Source_Checklist/master/#{file} -o #{file}`
-
-puts "#{file} created."
+  create_file(documents[first_argument])
+else
+  documents.values.each { |file| create_file(file) }
+end
