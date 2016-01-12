@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+
+# Exit cleanly from an early interrupt
+Signal.trap("INT") { abort }
+
+usage = <<~USAGE
+Get a document template to local.
+
+Commands:
+  docopy contributing # Copy CONTRIBUTING.md from jollygoodcode/Open_Source_Checklist
+  docopy deployment   # Copy DEPLOYMENT.md   from jollygoodcode/Open_Source_Checklist
+  docopy footer       # Copy FOOTER.md       from jollygoodcode/Open_Source_Checklist
+  docopy readme       # Copy LICENSE.md      from jollygoodcode/Open_Source_Checklist
+  docopy license      # Copy README.md       from jollygoodcode/Open_Source_Checklist
+USAGE
+
+documents = {
+  "contributing" => "CONTRIBUTING.md",
+  "deployment" => "DEPLOYMENT.md",
+  "footer" => "FOOTER.md",
+  "readme" => "README.md",
+  "license" => "LICENSE.md",
+}
+
+abort(usage) if ARGV.empty?
+
+first_argument = ARGV.first
+
+abort(usage) if ["-h", "--help", "help"].include?(first_argument)
+
+unless documents.keys.include?(first_argument)
+  abort("Document #{first_argument} not found.\n" + usage)
+end
+
+file = documents[first_argument]
+
+`curl --silent https://raw.githubusercontent.com/jollygoodcode/Open_Source_Checklist/master/#{file} -o #{file}`
+
+puts "#{file} created."
