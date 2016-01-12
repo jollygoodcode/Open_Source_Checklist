@@ -22,10 +22,6 @@
 - [ ] CHANGELOG file
   * http://keepachangelog.com
   * Follow SemVer 2.0 http://semver.org
-- [ ] LICENSE file
-  * http://choosealicense.com
-  * Year
-  * Author(s) Name
 - [ ] CONTRIBUTING file
   * General Guidelines
   * How to Set Up Development Environment?
@@ -36,13 +32,21 @@
   * [This file is special on GitHub](https://github.com/blog/1184-contributing-guidelines)
 - [ ] DEPLOYMENT file (Optional)
   * How to Deploy?
+- [ ] LICENSE file
+  * http://choosealicense.com
+  * Year
+  * Author(s) Name
 - [ ] Code of Conduct
   * http://contributor-covenant.org/version/1/3/0/code_of_conduct.md
+- [ ] Wiki (Optional)
 - [ ] Tests
   * All passed!
-- [ ] Wiki (Optional)
 - [ ] CI Service
-  * Setup CI service: Travis CI or Circle CI
+  * Setup Travis CI
+  * Badge in README
+- [ ] Code Climate Service
+  * Setup Travis CI
+  * Badge in README
 
 All files are in markdown format (`.md`).
 
